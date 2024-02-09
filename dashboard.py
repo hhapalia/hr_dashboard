@@ -153,18 +153,18 @@ with tab2:
     col5, col6, col7 = st.columns(3)
 
     with col5:
-        academic_chart = px.pie(academic, values=academic['Gender'].value_counts(), names=academic['Gender'].value_counts().index, title='Academic', color = ['Male', 'Female'], color_discrete_map={'Male':'slateblue','Female':'lightskyblue'})
+        academic_chart = px.pie(academic, values=academic['Gender'].value_counts(), names=academic['Gender'].value_counts().index, title='Academic', color = academic['Gender'].value_counts().index, color_discrete_map={'Male':'slateblue','Female':'lightskyblue'})
         academic_chart.update_layout(showlegend=False, title_x=0.35)
         st.plotly_chart(academic_chart, use_container_width=True)
 
     with col6:
-        nonacademic_chart = px.pie(nonacademic, values=nonacademic['Gender'].value_counts(), names=nonacademic['Gender'].value_counts().index, title='Non-Academic', color = ['Male', 'Female'], color_discrete_map={'Male':'slateblue','Female':'lightskyblue'})
+        nonacademic_chart = px.pie(nonacademic, values=nonacademic['Gender'].value_counts(), names=nonacademic['Gender'].value_counts().index, title='Non-Academic', color = nonacademic['Gender'].value_counts().index, color_discrete_map={'Male':'slateblue','Female':'lightskyblue'})
         nonacademic_chart.update_layout(showlegend=True, title_x=0.25)
         nonacademic_chart.update_layout(legend=dict(yanchor="bottom",y=-0.1,xanchor="left",x=0.3))
         st.plotly_chart(nonacademic_chart, use_container_width=True)
 
     with col7:
-        cocurricular_chart = px.pie(cocurricular, values=cocurricular['Gender'].value_counts(), names=cocurricular['Gender'].value_counts().index, title='Co-Curricular', color = ['Male', 'Female'], color_discrete_map={'Male':'slateblue','Female':'lightskyblue'})
+        cocurricular_chart = px.pie(cocurricular, values=cocurricular['Gender'].value_counts(), names=cocurricular['Gender'].value_counts().index, title='Co-Curricular', color = cocurricular['Gender'].value_counts().index, color_discrete_map={'Male':'slateblue','Female':'lightskyblue'})
         cocurricular_chart.update_layout(showlegend=False, title_x=0.25)
         st.plotly_chart(cocurricular_chart, use_container_width=True)
 
