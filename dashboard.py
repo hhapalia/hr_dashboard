@@ -144,7 +144,7 @@ tab1, tab2 = st.tabs(['All', 'Categories'])
 
 with tab1:
     st.write("All Categories (Academic, Non-Academic, Co-Curricular)")
-    all_chart = px.pie(dashboard_data, values=dashboard_data['Gender'].value_counts(), names=dashboard_data['Gender'].value_counts().index, title='All Categories', color = ['Male', 'Female'], color_discrete_map={'Male':'#636EFA','Female':'#19D3F3'})
+    all_chart = px.pie(dashboard_data, values=dashboard_data['Gender'].value_counts(), names=dashboard_data['Gender'].value_counts().index, title='All Categories', color = ['Male', 'Female'], color_discrete_map={'Male':'slateblue','Female':'lightskyblue'})
     all_chart.update_layout(title_x=0.35)
     st.plotly_chart(all_chart, use_container_width=True)
 
