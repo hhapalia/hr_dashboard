@@ -153,7 +153,7 @@ with tab2:
     col5, col6, col7 = st.columns(3)
 
     with col5:
-        academic_chart = px.pie(academic, values=academic['Gender'].value_counts(), names=academic['Gender'].value_counts().index, title='Academic', color = ['Male', 'Female'], color_discrete_map={'Male':'royalblue','Female':'forestgreen'})
+        academic_chart = px.pie(academic, values=academic['Gender'].value_counts(), names=academic['Gender'].value_counts().index, title='Academic', color = ['Male', 'Female'], color_discrete_map={'Male':'darkblue','Female':'cyan'})
         academic_chart.update_layout(showlegend=False, title_x=0.35)
         st.plotly_chart(academic_chart, use_container_width=True)
 
